@@ -1,0 +1,33 @@
+platform :ios, '10.0'
+
+source 'git@github.com:tokend/ios-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_modular_headers!
+
+def main_pods
+    pod 'DLCryptoKit', :path => '../'
+end
+
+target 'DLCryptoKit_Example' do
+    main_pods
+    
+    post_install do |installer|
+        
+        deploymentTargets = ['libsodium']
+        
+        installer.pods_project.targets.each do |target|
+            if deploymentTargets.include? target.name
+                target.build_configurations.each do |config|
+                    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
+                end
+            end
+        end
+    end
+end
+
+target 'DLCryptoKit_Tests' do
+    inherit! :search_paths
+
+    main_pods
+end
