@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DLCryptoKit'
-  s.version          = '1.0'
+  s.version          = '1.0.1'
   s.summary          = 'Crypto utilities.'
   s.homepage         = 'https://github.com/tokend/ios-crypto-kit'
   s.author           = { 'Distributed Lab' => 'info@distributedlab.com' }

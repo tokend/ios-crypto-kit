@@ -1,5 +1,6 @@
 import Foundation
 
+/// Provides functionality that allows to encrypt data with AES256 in GCM mode.
 public enum AES256 {
     
     public enum CryptoLibraryError: Error {
@@ -9,10 +10,19 @@ public enum AES256 {
         case ivOrKeyInitFailed
     }
     
+    /// Errors that may occur while encrypting
     public enum AES256gcmEncryptError: Error {
+        
+        /// Case of failed encryption
         case failedToEncrypt
     }
     
+    /// Method encrypts given message via AES256 GCM
+    /// - Returns: `Data`
+    /// - Parameters:
+    ///     - message: Data to be encrypted
+    ///     - key: Key which is used to encrypt
+    ///     - iv: Initialization vector data
     public static func aes256gcmEncrypt(
         message: Data,
         key: Data,
@@ -97,6 +107,12 @@ public enum AES256 {
         case verificationFailed
     }
     
+    /// Method encrypts given message with AES256 in GCM mode
+    /// - Returns: `Data`
+    /// - Parameters:
+    ///     - cypherText: Data to be decrypted
+    ///     - key: Key which was used to encrypt
+    ///     - iv: Initialization vector data
     public static func aes256gcmDecrypt(
         cypherText: Data,
         key: Data,

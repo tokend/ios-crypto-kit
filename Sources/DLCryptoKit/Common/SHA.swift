@@ -2,8 +2,13 @@ import Foundation
 
 public extension Common {
     
+    /// Provides methods for hashes data using SHA
     public enum SHA {
         
+        /// Method encrypt data with SHA1
+        /// - Returns: `Data`
+        /// - Parameters:
+        ///     - data: Data to be encrypted
         public static func sha1(data: Data) -> Data {
             let result: Data = data.withUnsafeBytes { (dataPointer: UnsafePointer<UInt8>) in
                 let n: Int = data.count
@@ -27,6 +32,10 @@ public extension Common {
             return result
         }
         
+        /// Method encrypt data with SHA256
+        /// - Returns: `Data`
+        /// - Parameters:
+        ///     - data: Data to be encrypted
         public static func sha256(data: Data) -> Data {
             let result: Data = data.withUnsafeBytes { (dataPointer: UnsafePointer<UInt8>) in
                 let n: Int = data.count

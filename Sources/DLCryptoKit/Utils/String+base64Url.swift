@@ -1,6 +1,9 @@
 import Foundation
 
 extension String {
+    
+    /// Method transforms string from base 64 url to base 64 string
+    /// - Returns: `String`
     public func base64UrlToBase64String() -> String {
         var base64 = self
             .replacingOccurrences(of: "-", with: "+")
@@ -11,6 +14,8 @@ extension String {
         return base64
     }
     
+    /// Method transforms string from base 64 string to base 64 url
+    /// - Returns: `String`
     public func base64StringToBase64Url() -> String {
         var base64 = self
             .replacingOccurrences(of: "+", with: "-")

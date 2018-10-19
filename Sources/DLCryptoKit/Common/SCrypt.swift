@@ -2,12 +2,24 @@ import Foundation
 
 public extension Common {
     
+    /// Provides functionality which allows you to derive keys
     public enum SCrypt {
         
+        /// Error models that may occur while performing `SCrypt.scryptSalsa208sha256`
         public enum SCryptSalsa208sha256Error: Error {
             case hashFailed
         }
         
+        /// Method derives key using given password and parameters
+        /// then encrypts it via Salasa20 and SHA256
+        /// - Returns: `Data`
+        /// - Parameters:
+        ///     - password: Data which is used to derive key
+        ///     - salt: Data which is used to safeguard password
+        ///     - n: CPU/memory cost parameter
+        ///     - r: Blocksize parameter
+        ///     - p: Parallelization parameter
+        ///     - keyLength: Length of result key
         public static func scryptSalsa208sha256(
             password: Data,
             salt: Data,

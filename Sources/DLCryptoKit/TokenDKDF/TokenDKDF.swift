@@ -1,5 +1,6 @@
 import Foundation
 
+/// Provides functioanlity that allows to perform key derivation
 public enum TokenDKDF {
     
     public static let deriveKeyMasterKeyWalletId: String    = "WALLET_ID"
@@ -7,11 +8,28 @@ public enum TokenDKDF {
     
     public static let supportedEncryptionVersions: [Int] = [1]
     
+    /// Errors that may occur while deriving key
     public enum DeriveKeyError: Error {
+        
+        /// Case of unsupported encryption version
         case unsupportedEncryptionVersion
+        
+        /// Case of failed string encoding
         case stringEncodingFailed
     }
     
+    /// Method derives key for given master key
+    /// - Returns: `Data`
+    /// - Parameters:
+    ///     - login: User's login
+    ///     - password: User's password
+    ///     - salt: Data which is used to safeguard password
+    ///     - masterKey: Master key
+    ///     - n: Scrypt `n` parameter
+    ///     - r: Scrypt `r` parameter
+    ///     - p: Scrypt `p` parameter
+    ///     - encryptionVersion: Encryption version
+    ///     - keyLength: Length of result key
     public static func deriveKey(
         login: String,
         password: String,

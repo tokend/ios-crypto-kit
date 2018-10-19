@@ -6,10 +6,18 @@ public enum ECDSA {
     
     // MARK: - Public
     
+    /// Error models which may occur while signing data
     public enum SignED25519Error: Error {
+        
+        /// Case of signing failure
         case signFailed
     }
     
+    /// Method signs data with given key
+    /// - Returns: `Data`
+    /// - Parameters:
+    ///     - data: Data to be signed
+    ///     - keyData: Key used to sign
     public static func signED25519(
         data: Data,
         keyData: KeyData
@@ -46,6 +54,12 @@ public enum ECDSA {
         return result
     }
     
+    /// Method verifies signature
+    /// - Returns: `Bool`
+    /// - Parameters:
+    ///     - signatureData: Data to be verified
+    ///     - messageData: Message to be signed
+    ///     - publicKeyData: Public key used to sign message
     public static func verifyED25519(
         signatureData: Data,
         messageData: Data,
@@ -81,6 +95,7 @@ public enum ECDSA {
 
 extension ECDSA {
     
+    /// Struct contains key pair data
     public struct KeyData {
         
         // MARK: - Static properties
@@ -96,11 +111,17 @@ extension ECDSA {
         
         // MARK: -
         
+        /// Errors that may occur while initializing key pair
         public enum KeyInitError: Error {
+            
+            /// Case of initializing key with the seed of wrong size
             case wrongSeedSize
+            
+            /// Case of failed initializing
             case initFailed
         }
         
+        /// Inits new random key pair
         public init() throws {
             var publicKey: Data = Data()
             let privateKey = try Common.getData(
@@ -139,6 +160,7 @@ extension ECDSA {
             self.publicKeyData = publicKey
         }
         
+        /// Inits key pair with given seed
         public init(seed: Data) throws {
             var publicKey: Data = Data()
             let privateKey: Data = try seed.withUnsafeBytes { (seedPtr: UnsafePointer<UInt8>) in
@@ -190,14 +212,20 @@ extension ECDSA {
         
         // MARK: - Public
         
+        /// Method fetches private key data from key pair
+        /// - Returns: `Data`
         public func getPrivateKeyData() -> Data {
             return self.privateKeyData
         }
         
+        /// Method fetches public key data from key pair
+        /// - Returns: `Data`
         public func getPublicKeyData() -> Data {
             return self.publicKeyData
         }
         
+        /// Method fetches seed data from key pair
+        /// - Returns: `Data`
         public func getSeedData() -> Data {
             let seed: Data = self.privateKeyData.withUnsafeBytes { (privateKeyPtr: UnsafePointer<UInt8>) in
                 let seedSize = KeyData.seedSize

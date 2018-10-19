@@ -1,17 +1,17 @@
 PODS:
-  - DLCryptoKit (1.0):
-    - DLCryptoKit/AES256 (= 1.0)
-    - DLCryptoKit/ECDSA (= 1.0)
-    - DLCryptoKit/TokenDKDF (= 1.0)
+  - DLCryptoKit (1.0.1):
+    - DLCryptoKit/AES256 (= 1.0.1)
+    - DLCryptoKit/ECDSA (= 1.0.1)
+    - DLCryptoKit/TokenDKDF (= 1.0.1)
     - DLOpenSSL
     - libsodium
-  - DLCryptoKit/AES256 (1.0):
+  - DLCryptoKit/AES256 (1.0.1):
     - DLOpenSSL
     - libsodium
-  - DLCryptoKit/ECDSA (1.0):
+  - DLCryptoKit/ECDSA (1.0.1):
     - DLOpenSSL
     - libsodium
-  - DLCryptoKit/TokenDKDF (1.0):
+  - DLCryptoKit/TokenDKDF (1.0.1):
     - DLOpenSSL
     - libsodium
   - DLOpenSSL (1.0)
@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DLCryptoKit: b59461c8333d67828707f2e85ccf2255a61c0969
+  DLCryptoKit: 4f990dec196f9cbf5c49f0d2972ed7e9c402364a
   DLOpenSSL: e7f152c7108fcf5dcec54b46ecfd22051bd941aa
   libsodium: 9a8faa5ef2fa0d2d57bd7f7d79bf8fb7c1a9f0ea
 

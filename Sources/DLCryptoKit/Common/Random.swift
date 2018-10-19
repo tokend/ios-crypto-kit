@@ -2,8 +2,13 @@ import Foundation
 
 public extension Common {
     
+    /// Provides functionality which allows you to generate random byte sequences
     public enum Random {
         
+        /// Method generates random sequence of bytes
+        /// - Returns: `Data`
+        /// - Parameters:
+        ///     - length: Length of byte sequence
         public static func generateRandom(length: Int) -> Data {
             let bufLength = length
             let buf: UMPointer<UInt8> = UMPointer<UInt8>.allocate(capacity: bufLength)

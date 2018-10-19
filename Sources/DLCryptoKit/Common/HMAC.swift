@@ -2,12 +2,21 @@ import Foundation
 
 public extension Common {
     
+    /// Provides methods for hashing data using HMAC
     public enum HMAC {
         
+        /// Error models that may occur while encrypting
         public enum HMACSHA256Error: Error {
+            
+            /// Case of failed
             case hashFailed
         }
         
+        /// Method hashes data with HMAC-SHA256
+        /// - Returns: `Data`
+        /// - Parameters:
+        ///     - data: Data to be hashed
+        ///     - key: Encryption key
         public static func hmacsha256(
             data: Data,
             key: Data
