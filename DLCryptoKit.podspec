@@ -3,7 +3,8 @@ Pod::Spec.new do |s|
   s.version          = '1.0.1'
   s.summary          = 'Crypto utilities.'
   s.homepage         = 'https://github.com/tokend/ios-crypto-kit'
-  s.author           = { 'Distributed Lab' => 'info@distributedlab.com' }
+  s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
+  s.author           = { 'Distributed Lab' => 'dev@distributedlab.com' }
   s.source           = { :git => 'https://github.com/tokend/ios-crypto-kit.git', :tag => s.version.to_s }
   s.swift_version    = '4.2'
   s.exclude_files = 'Example/*'
