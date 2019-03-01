@@ -1,4 +1,5 @@
 import Foundation
+import Clibsodium
 
 public enum ECDSA {
     

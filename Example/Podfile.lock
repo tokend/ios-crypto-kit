@@ -1,21 +1,7 @@
 PODS:
-  - DLCryptoKit (1.0.1):
-    - DLCryptoKit/AES256 (= 1.0.1)
-    - DLCryptoKit/ECDSA (= 1.0.1)
-    - DLCryptoKit/TokenDKDF (= 1.0.1)
+  - DLCryptoKit (2.0.1):
     - DLOpenSSL
-    - libsodium
-  - DLCryptoKit/AES256 (1.0.1):
-    - DLOpenSSL
-    - libsodium
-  - DLCryptoKit/ECDSA (1.0.1):
-    - DLOpenSSL
-    - libsodium
-  - DLCryptoKit/TokenDKDF (1.0.1):
-    - DLOpenSSL
-    - libsodium
-  - DLOpenSSL (1.0)
-  - libsodium (1.0.12)
+  - DLOpenSSL (1.0.2)
 
 DEPENDENCIES:
   - DLCryptoKit (from `../`)
@@ -23,18 +9,15 @@ DEPENDENCIES:
 SPEC REPOS:
   "git@github.com:tokend/ios-specs.git":
     - DLOpenSSL
-  https://github.com/cocoapods/specs.git:
-    - libsodium
 
 EXTERNAL SOURCES:
   DLCryptoKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DLCryptoKit: 4f990dec196f9cbf5c49f0d2972ed7e9c402364a
-  DLOpenSSL: e7f152c7108fcf5dcec54b46ecfd22051bd941aa
-  libsodium: 9a8faa5ef2fa0d2d57bd7f7d79bf8fb7c1a9f0ea
+  DLCryptoKit: a383c47acdcecb05d13c75d593d4a6a4cc63f96a
+  DLOpenSSL: 78d928228cb6d95fcaa354f4f9aba041ccf95457
 
-PODFILE CHECKSUM: a7fc878955aeafba8a50f77935b88ca45bc2621e
+PODFILE CHECKSUM: 42b8c7f71b2a46450b74cc83fdaad091af80e580
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

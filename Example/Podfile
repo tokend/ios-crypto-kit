@@ -6,28 +6,15 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_modular_headers!
 
 def main_pods
-    pod 'DLCryptoKit', :path => '../'
+  pod 'DLCryptoKit', path: '../'
 end
 
 target 'DLCryptoKit_Example' do
-    main_pods
-    
-    post_install do |installer|
-        
-        deploymentTargets = ['libsodium']
-        
-        installer.pods_project.targets.each do |target|
-            if deploymentTargets.include? target.name
-                target.build_configurations.each do |config|
-                    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '10.0'
-                end
-            end
-        end
-    end
+  main_pods
 end
 
 target 'DLCryptoKit_Tests' do
-    inherit! :search_paths
+  inherit! :search_paths
 
-    main_pods
+  main_pods
 end

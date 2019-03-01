@@ -1,4 +1,5 @@
 import Foundation
+import Clibsodium
 
 public extension Common {
     
