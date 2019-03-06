@@ -15,6 +15,5 @@ it, simply add the following line to your Podfile:
 pod 'DLCryptoKit'
 ```
 
-## Author
-
-Distributed Lab
+## Credits
+<a href="https://distributedlab.com/" target="_blank">Distributed Lab</a>, 2019
