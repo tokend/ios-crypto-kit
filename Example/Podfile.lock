@@ -1,5 +1,5 @@
 PODS:
-  - DLCryptoKit (2.0.1):
+  - DLCryptoKit (2.0.2):
     - DLOpenSSL
   - DLOpenSSL (1.0.2)
 
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DLCryptoKit: a383c47acdcecb05d13c75d593d4a6a4cc63f96a
+  DLCryptoKit: 59886a06abedc7df915cff45ef6a98b3bd58844a
   DLOpenSSL: 78d928228cb6d95fcaa354f4f9aba041ccf95457
 
 PODFILE CHECKSUM: 42b8c7f71b2a46450b74cc83fdaad091af80e580
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4

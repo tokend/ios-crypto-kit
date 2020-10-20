@@ -33,7 +33,6 @@ public enum AES256 {
             let messageLength: Int32 = Int32(message.count)
             
             let result: Data = try key.withUnsafeBytes { (keyPtr: UnsafePointer<UInt8>) in
-                let keyLength = key.count
                 
                 let result: Data = try iv.withUnsafeBytes { (ivPtr: UnsafePointer<UInt8>) in
                     let ivLength = Int32(iv.count)
@@ -121,7 +120,6 @@ public enum AES256 {
         
         let cypherData = cypherText[0..<cypherText.count - Int(EVP_GCM_TLS_TAG_LEN)]
         var tagData = cypherText[cypherText.count - Int(EVP_GCM_TLS_TAG_LEN)..<cypherText.count]
-        let tagDataLength: Int32 = Int32(tagData.count)
         
         let result: Data = try cypherData.withUnsafeBytes { (cypherDataPtr: UnsafePointer<UInt8>) in
             let cypherDataLength: Int32 = Int32(cypherData.count)
@@ -130,8 +128,7 @@ public enum AES256 {
                 let tagDataRawPtr = UMRPointer(tagDataPtr)
                 
                 let result: Data = try key.withUnsafeBytes { (keyPtr: UnsafePointer<UInt8>) in
-                    let keyLength = key.count
-                    
+
                     let result: Data = try iv.withUnsafeBytes { (ivPtr: UnsafePointer<UInt8>) in
                         let ivLength = Int32(iv.count)
                         

@@ -4,7 +4,7 @@ import Clibsodium
 public extension Common {
     
     /// Provides functionality which allows you to derive keys
-    public enum SCrypt {
+    enum SCrypt {
         
         /// Error models that may occur while performing `SCrypt.scryptSalsa208sha256`
         public enum SCryptSalsa208sha256Error: Error {

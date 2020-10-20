@@ -3,7 +3,7 @@ import Foundation
 public extension Common {
     
     /// Provides methods for hashes data using SHA
-    public enum SHA {
+    enum SHA {
         
         /// Method encrypt data with SHA1
         /// - Returns: `Data`

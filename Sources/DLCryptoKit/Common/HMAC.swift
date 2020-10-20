@@ -4,7 +4,7 @@ import Clibsodium
 public extension Common {
     
     /// Provides methods for hashing data using HMAC
-    public enum HMAC {
+    enum HMAC {
         
         /// Error models that may occur while encrypting
         public enum HMACSHA256Error: Error {
@@ -29,7 +29,6 @@ public extension Common {
                 
                 let result: Data = try key.withUnsafeBytes { (keyU8Ptr: UnsafePointer<UInt8>) in
                     let keyPtr = keyU8Ptr
-                    let keyLength: Int = key.count
                     
                     let bufLength = crypto_auth_hmacsha256_bytes()
                     let buf: UMPointer<UInt8> = UMPointer<UInt8>.allocate(capacity: bufLength)

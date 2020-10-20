@@ -4,7 +4,7 @@ import Clibsodium
 public extension Common {
     
     /// Provides functionality which allows you to generate random byte sequences
-    public enum Random {
+    enum Random {
         
         /// Method generates random sequence of bytes
         /// - Returns: `Data`
