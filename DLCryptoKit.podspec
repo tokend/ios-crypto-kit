@@ -15,11 +15,11 @@ Pod::Spec.new do |s|
 
   s.ios.vendored_library = 'Libraries/libsodium/libsodium.a'
 
-  s.ios.source_files = 'Sources/DLCryptoKit/**/*.{swift,h}', 'Libraries/**/*.{swift,h}'
+  s.ios.source_files = 'Sources/DLCryptoKit/**/*.{swift,c,h}', 'Libraries/**/*.{swift,h}'
   s.ios.private_header_files = 'Libraries/libsodium/*.h'
 
-  s.preserve_paths = 'Libraries/libsodium/module.modulemap'
+  s.preserve_paths = 'Libraries/libsodium/module.modulemap', 'Sources/DLCryptoKit/SHA3/module.modulemap'
   s.pod_target_xcconfig = {
-    'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/Libraries/libsodium'
+    'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/Libraries/libsodium $(PODS_TARGET_SRCROOT)/Sources/DLCryptoKit/SHA3'
   }
 end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28AB332F25C8479100305415 /* KeccakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AB332E25C8479100305415 /* KeccakTests.swift */; };
+		28AB333B25C8569B00305415 /* SHA3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AB333A25C8569B00305415 /* SHA3Tests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28AB332E25C8479100305415 /* KeccakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeccakTests.swift; sourceTree = "<group>"; };
+		28AB333A25C8569B00305415 /* SHA3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA3Tests.swift; sourceTree = "<group>"; };
 		2DDA6C07D31EB0B7A615F934 /* DLCryptoKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DLCryptoKit.podspec; path = ../DLCryptoKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* DLCryptoKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLCryptoKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				7FEB45AF20D3F198001CA31C /* AES256Tests.swift */,
 				7FEB45A820D154F0001CA31C /* CommonTests.swift */,
 				7FEB45B120D7F5EB001CA31C /* ECDSATests.swift */,
+				28AB332E25C8479100305415 /* KeccakTests.swift */,
+				28AB333A25C8569B00305415 /* SHA3Tests.swift */,
 				7FEB459120D02E58001CA31C /* TokenDKDFTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -236,6 +242,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -342,7 +349,9 @@
 			files = (
 				7FEB45B020D3F198001CA31C /* AES256Tests.swift in Sources */,
 				7FEB45AC20D15609001CA31C /* CommonTests.swift in Sources */,
+				28AB333B25C8569B00305415 /* SHA3Tests.swift in Sources */,
 				7FEB45B220D7F5EB001CA31C /* ECDSATests.swift in Sources */,
+				28AB332F25C8479100305415 /* KeccakTests.swift in Sources */,
 				7FEB459220D02E58001CA31C /* TokenDKDFTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
